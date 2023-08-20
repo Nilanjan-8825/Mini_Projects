@@ -26,10 +26,10 @@ app.post('/', function(req, res) {
         ],
       };
     const Json_data=JSON.stringify(data);
-    const url="https://us21.api.mailchimp.com/3.0/lists/d9a4d0cfd0";
+    const url="URL";
     const options={
         method:"POST",
-        auth:"Ash:ce670f4b5ef95af23784eaa07b4bb3ac-us21"
+        auth:"API_KEY"
     }
     const request=https.request(url,options,function(response){
         response.on("data",function(data){
@@ -55,5 +55,3 @@ app.post('/failure',function(req,res){
 app.listen(process.env.PORT || 3000,function(){
     console.log("Server is being hosted on 3000");
 });
-// <!-- api key: ce670f4b5ef95af23784eaa07b4bb3ac-us21 -->
-// <!-- List id: d9a4d0cfd0 -->
